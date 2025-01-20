@@ -54,10 +54,7 @@ const isAdmins = groupAdmins.includes(m.sender)
 const isStatus = m.chat === "status@broadcast" ? true : false
 
 
-
-
-
-if (m.isGroup) {
+  
 let chats = db.data.chats[m.chat];
 if (typeof chats !== "object") db.data.chats[m.chat] = {};
 if (chats) {
@@ -66,7 +63,7 @@ if (!("mute" in chats)) chats.mute = false;
 global.db.data.chats[m.chat] = {
 mute: false,
 };
-}
+
 
 
 
