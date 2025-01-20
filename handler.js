@@ -223,7 +223,8 @@ case 'upsw':{
 if (!itsMe) return
 if (!text) return reply('mana linknya bruh❔, cth: /upsw https:///|.')
 try {
-let [url, caption] = text.split('|')
+let url = text.split('|')[0]
+let caption = text.split('|')[1]
 if (!url.startsWith('https://')) return reply('itu bukan link!')
 await reply('tunggu bentar') 
 let done = await Satzz.sendMessage("status@broadcast", {video: 
